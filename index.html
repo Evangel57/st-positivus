@@ -43,13 +43,21 @@
         </div>
     </section>
     <section class="section">
-        <div class="companies-logo">
-            <img src="./images/companies-logo/Company logo.svg" alt="">
-            <img src="./images/companies-logo/Company logo-1.svg" alt="">
-            <img src="./images/companies-logo/Company logo-2.svg" alt="">
-            <img src="./images/companies-logo/Company logo-3.svg" alt="">
-            <img src="./images/companies-logo/Company logo-4.svg" alt="">
-            <img src="./images/companies-logo/Company logo-5.svg" alt="">
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <img src="./images/companies-logo/Company logo.svg" alt="">
+                <img src="./images/companies-logo/Company logo-1.svg" alt="">
+                <img src="./images/companies-logo/Company logo-2.svg" alt="">
+                <img src="./images/companies-logo/Company logo-3.svg" alt="">
+                <img src="./images/companies-logo/Company logo-4.svg" alt="">
+                <img src="./images/companies-logo/Company logo-5.svg" alt="">
+                <img src="./images/companies-logo/Company logo.svg" alt="">
+                <img src="./images/companies-logo/Company logo-1.svg" alt="">
+                <img src="./images/companies-logo/Company logo-2.svg" alt="">
+                <img src="./images/companies-logo/Company logo-3.svg" alt="">
+                <img src="./images/companies-logo/Company logo-4.svg" alt="">
+                <img src="./images/companies-logo/Company logo-5.svg" alt="">
+            </div>
         </div>
     </section>
     <section class="section services">
@@ -76,8 +84,8 @@
             <div class="card card--green">
                 <div class="card__text">
                     <div>
-                        <p class="color-text color-text--white">Поисковая</p>
-                        <p class="color-text color-text--white">оптимизация</p>
+                        <p class="color-text color-text--white">Контент-</p>
+                        <p class="color-text color-text--white">маркетинг</p>
                     </div>
                     <a>
                         <img src="./images/arrow.png">
@@ -89,8 +97,8 @@
             <div class="card card--black">
                 <div class="card__text">
                     <div>
-                        <p class="color-text color-text--white">Поисковая</p>
-                        <p class="color-text color-text--white">оптимизация</p>
+                        <p class="color-text color-text--white">Таргетированная</p>
+                        <p class="color-text color-text--white">реклама</p>
                     </div>
                     <a>
                         <img src="./images/arrow.png">
@@ -102,8 +110,8 @@
             <div class="card card--gray">
                 <div class="card__text">
                     <div>
-                        <p class="color-text color-text--green">Поисковая</p>
-                        <p class="color-text color-text--green">оптимизация</p>
+                        <p class="color-text color-text--green">Маркетинг</p>
+                        <p class="color-text color-text--green">в соцсетях</p>
                     </div>
                     <a>
                         <img src="./images/arrow.png">
@@ -115,8 +123,8 @@
             <div class="card card--green">
                 <div class="card__text">
                     <div>
-                        <p class="color-text color-text--white">Поисковая</p>
-                        <p class="color-text color-text--white">оптимизация</p>
+                        <p class="color-text color-text--white">Email-</p>
+                        <p class="color-text color-text--white">маркетинг</p>
                     </div>
                     <a>
                         <img src="./images/arrow.png">
@@ -128,8 +136,8 @@
             <div class="card card--black">
                 <div class="card__text">
                     <div>
-                        <p class="color-text color-text--green">Поисковая</p>
-                        <p class="color-text color-text--green">оптимизация</p>
+                        <p class="color-text color-text--green">Веб-</p>
+                        <p class="color-text color-text--green">аналитика</p>
                     </div>
                     <a>
                         <img src="./images/arrow.png">
@@ -137,6 +145,27 @@
                     </a>
                 </div>
                 <img src="./images/services-img/Illustration (5).svg" alt="illustration">
+            </div>
+        </div>
+    </section>
+
+    <section class="section stats">
+        <div class="stats__grid">
+            <div class="stat">
+                <span class="stat__number" data-target="200">0</span><span class="stat__suffix">+</span>
+                <p>клиентов</p>
+            </div>
+            <div class="stat">
+                <span class="stat__number" data-target="5">0</span>
+                <p>лет опыта</p>
+            </div>
+            <div class="stat">
+                <span class="stat__number" data-target="98">0</span><span class="stat__suffix">%</span>
+                <p>довольных клиентов</p>
+            </div>
+            <div class="stat">
+                <span class="stat__number" data-target="50">0</span><span class="stat__suffix">+</span>
+                <p>проектов в год</p>
             </div>
         </div>
     </section>
@@ -190,5 +219,52 @@
             <a href="#">Политика конфиденциальности</a>
         </div>
     </div>
+    <script>
+        // Burger menu
+        const burgerIcon = document.querySelector('.header-menu__icon');
+        const headerMenu = document.querySelector('.header__menu');
+        burgerIcon.addEventListener('click', () => {
+            headerMenu.classList.toggle('open');
+        });
+
+        // Scroll reveal
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.card').forEach((el, i) => {
+            el.classList.add('reveal');
+            el.style.transitionDelay = `${i * 0.08}s`;
+            revealObserver.observe(el);
+        });
+        document.querySelectorAll('.section, .stat').forEach(el => {
+            el.classList.add('reveal');
+            revealObserver.observe(el);
+        });
+
+        // Animated counters
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const target = +el.dataset.target;
+                let current = 0;
+                const step = target / 60;
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    el.textContent = Math.floor(current);
+                }, 16);
+                counterObserver.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat__number').forEach(el => counterObserver.observe(el));
+    </script>
 </body>
 </html>
