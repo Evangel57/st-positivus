@@ -209,14 +209,10 @@
                 </div>
 
             </div>
-            <div class="footer-middle__form">
-                <input type="text" placeholder="Введите почту">
-                <a href="#">Узнать больше</a>
+            <div class="footer-middle__form" id="contact-form">
+                <input type="email" id="email-input" placeholder="Введите почту">
+                <button class="btn-form" id="form-submit">Отправить</button>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2024. Все права защищены</span>
-            <a href="#">Политика конфиденциальности</a>
         </div>
     </div>
     <script>
@@ -225,6 +221,56 @@
         const headerMenu = document.querySelector('.header__menu');
         burgerIcon.addEventListener('click', () => {
             headerMenu.classList.toggle('open');
+        });
+
+        // Scroll to form
+        const scrollToForm = () => {
+            document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+        };
+        document.querySelector('.btn--light').addEventListener('click', scrollToForm);
+        document.querySelector('.btn--dark').addEventListener('click', scrollToForm);
+        document.querySelectorAll('.card__text a').forEach(a => {
+            a.addEventListener('click', scrollToForm);
+        });
+
+        // Form submit
+        const emailInput = document.getElementById('email-input');
+        document.getElementById('form-submit').addEventListener('click', () => {
+            const email = emailInput.value.trim();
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailInput.style.borderColor = '#f87171';
+                emailInput.focus();
+                return;
+            }
+            emailInput.style.borderColor = '';
+            showToast('Заявка отправлена! Мы свяжемся с вами скоро.');
+            emailInput.value = '';
+        });
+
+        // Toast
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            requestAnimationFrame(() => toast.classList.add('toast--visible'));
+            setTimeout(() => {
+                toast.classList.remove('toast--visible');
+                setTimeout(() => toast.remove(), 400);
+            }, 3000);
+        }
+
+        // Ripple effect
+        document.querySelectorAll('.btn, .btn-form').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                ripple.className = 'ripple';
+                const rect = this.getBoundingClientRect();
+                ripple.style.left = `${e.clientX - rect.left}px`;
+                ripple.style.top = `${e.clientY - rect.top}px`;
+                this.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            });
         });
 
         // Scroll reveal
