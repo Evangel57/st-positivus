@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/pages.css">
+    <title>О нас — Positivus</title>
+</head>
+<body class="container">
+    <nav class="header">
+        <a href="index.html"><img src="./images/Logo.svg" alt="Positivus"></a>
+        <svg class="header-menu__icon" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="44px" fill="#000">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg>
+        <div class="header__menu">
+            <ol class="menu-list">
+                <li><a class="menu__item" href="about.html">О нас</a></li>
+                <li><a class="menu__item" href="#">Услуги</a></li>
+                <li><a class="menu__item" href="#">Применение</a></li>
+                <li><a class="menu__item" href="#">Стоимость</a></li>
+                <li><a class="menu__item" href="blog.html">Блог</a></li>
+            </ol>
+            <button class="btn btn--light" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">Узнать цену</button>
+        </div>
+    </nav>
+
+    <section class="section page-hero">
+        <div class="page-hero__text">
+            <h1>О <span class="color-text color-text--green">нас</span></h1>
+            <p>Мы — команда специалистов по цифровому маркетингу, которые помогают бизнесу расти онлайн. С 2019 года реализуем проекты от стартапов до крупных компаний.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="about-mission">
+            <div class="about-mission__text">
+                <h2>Наша <span class="color-text color-text--green">миссия</span></h2>
+                <p>Мы верим, что каждый бизнес заслуживает эффективного присутствия в интернете. Наша цель — сделать цифровой маркетинг понятным, измеримым и результативным для каждого клиента.</p>
+                <p>Мы не просто запускаем рекламу — мы строим долгосрочные стратегии, которые работают даже после окончания нашего сотрудничества.</p>
+            </div>
+            <div class="about-mission__values">
+                <div class="value-card">
+                    <span class="value-card__num">01</span>
+                    <h3>Прозрачность</h3>
+                    <p>Отчёты каждую неделю. Никакого скрытого бюджета.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-card__num">02</span>
+                    <h3>Результат</h3>
+                    <p>Работаем на KPI, а не на красивые презентации.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-card__num">03</span>
+                    <h3>Партнёрство</h3>
+                    <p>Ваш бизнес — наш бизнес. Болеем за общий результат.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="services__text">
+            <p class="color-text color-text--green">Команда</p>
+            <p>Люди, которые делают результат каждый день</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar" style="background:#B9FF66;color:#191A23">АС</div>
+                <h3>Алексей Смирнов</h3>
+                <p class="team-role">Основатель & CEO</p>
+                <p class="team-bio">10 лет в digital. Строил маркетинг для e-commerce и SaaS-компаний.</p>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar" style="background:#191A23;color:#B9FF66">МК</div>
+                <h3>Мария Козлова</h3>
+                <p class="team-role">Head of SEO</p>
+                <p class="team-bio">Вывела в топ-3 более 80 проектов. Специализация — конкурентные ниши.</p>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar" style="background:#B9FF66;color:#191A23">ДП</div>
+                <h3>Дмитрий Петров</h3>
+                <p class="team-role">Таргетолог</p>
+                <p class="team-bio">Управлял бюджетами от 1 млн ₽/мес. Facebook, VK, TikTok Ads.</p>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar" style="background:#191A23;color:#B9FF66">ОВ</div>
+                <h3>Ольга Власова</h3>
+                <p class="team-role">Контент-стратег</p>
+                <p class="team-bio">Пишет тексты, которые продают. Автор 500+ статей для B2B и B2C.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section stats">
+        <div class="stats__grid">
+            <div class="stat">
+                <span class="stat__number" data-target="200">0</span><span class="stat__suffix">+</span>
+                <p>клиентов</p>
+            </div>
+            <div class="stat">
+                <span class="stat__number" data-target="5">0</span>
+                <p>лет опыта</p>
+            </div>
+            <div class="stat">
+                <span class="stat__number" data-target="98">0</span><span class="stat__suffix">%</span>
+                <p>довольных клиентов</p>
+            </div>
+            <div class="stat">
+                <span class="stat__number" data-target="50">0</span><span class="stat__suffix">+</span>
+                <p>проектов в год</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="footer-top">
+            <a href="index.html"><img src="./images/logo-white.svg" alt="logo"></a>
+            <ul class="menu-list menu-list--desktop" style="color: #fff;">
+                <li><a class="menu__item" href="about.html">О нас</a></li>
+                <li><a class="menu__item" href="#">Услуги</a></li>
+                <li><a class="menu__item" href="#">Применение</a></li>
+                <li><a class="menu__item" href="#">Стоимость</a></li>
+                <li><a class="menu__item" href="blog.html">Блог</a></li>
+            </ul>
+            <div class="contacts">
+                <a href="#"><img src="./images/f.svg" /></a>
+                <a href="#"><img src="./images/twitter.png" /></a>
+                <a href="#"><img src="./images/in.svg" /></a>
+            </div>
+        </div>
+        <ul class="menu-list menu-list--mobile" style="color: #fff;">
+            <li><a class="menu__item" href="about.html">О нас</a></li>
+            <li><a class="menu__item" href="#">Услуги</a></li>
+            <li><a class="menu__item" href="#">Применение</a></li>
+            <li><a class="menu__item" href="#">Стоимость</a></li>
+            <li><a class="menu__item" href="blog.html">Блог</a></li>
+        </ul>
+        <div class="footer-middle">
+            <div class="footer-middle__content">
+                <div class="footer-middle__content-title" style="background-color: #b9ff66">Свяжитесь с нами:</div>
+                <div class="footer-middle__content-contacts">
+                    <span>Почта: info@positivus.com</span>
+                    <span>Телефон: +7 (999) 999-66-99</span>
+                    <span style="width: 250px;">Адрес: Россия, г. Новосибирск, ул. Немировича-Данченко, 102</span>
+                </div>
+            </div>
+            <div class="footer-middle__form" id="contact-form">
+                <input type="email" id="email-input" placeholder="Введите почту">
+                <button class="btn-form" id="form-submit">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const burgerIcon = document.querySelector('.header-menu__icon');
+        const headerMenu = document.querySelector('.header__menu');
+        burgerIcon.addEventListener('click', () => headerMenu.classList.toggle('open'));
+
+        document.getElementById('form-submit').addEventListener('click', () => {
+            const emailInput = document.getElementById('email-input');
+            const email = emailInput.value.trim();
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailInput.style.borderColor = '#f87171';
+                emailInput.focus();
+                return;
+            }
+            emailInput.style.borderColor = '';
+            showToast('Заявка отправлена! Мы свяжемся с вами скоро.');
+            emailInput.value = '';
+        });
+
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            requestAnimationFrame(() => toast.classList.add('toast--visible'));
+            setTimeout(() => {
+                toast.classList.remove('toast--visible');
+                setTimeout(() => toast.remove(), 400);
+            }, 3000);
+        }
+
+        document.querySelectorAll('.btn, .btn-form').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                ripple.className = 'ripple';
+                const rect = this.getBoundingClientRect();
+                ripple.style.left = `${e.clientX - rect.left}px`;
+                ripple.style.top = `${e.clientY - rect.top}px`;
+                this.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.team-card, .value-card, .section, .stat').forEach((el, i) => {
+            el.classList.add('reveal');
+            el.style.transitionDelay = `${i * 0.08}s`;
+            revealObserver.observe(el);
+        });
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const target = +el.dataset.target;
+                let current = 0;
+                const step = target / 60;
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) { current = target; clearInterval(timer); }
+                    el.textContent = Math.floor(current);
+                }, 16);
+                counterObserver.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.stat__number').forEach(el => counterObserver.observe(el));
+    </script>
+</body>
+</html>

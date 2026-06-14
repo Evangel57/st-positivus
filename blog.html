@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/pages.css">
+    <title>Блог — Positivus</title>
+</head>
+<body class="container">
+    <nav class="header">
+        <a href="index.html"><img src="./images/Logo.svg" alt="Positivus"></a>
+        <svg class="header-menu__icon" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="44px" fill="#000">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+        </svg>
+        <div class="header__menu">
+            <ol class="menu-list">
+                <li><a class="menu__item" href="about.html">О нас</a></li>
+                <li><a class="menu__item" href="#">Услуги</a></li>
+                <li><a class="menu__item" href="#">Применение</a></li>
+                <li><a class="menu__item" href="#">Стоимость</a></li>
+                <li><a class="menu__item" href="blog.html">Блог</a></li>
+            </ol>
+            <button class="btn btn--light" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">Узнать цену</button>
+        </div>
+    </nav>
+
+    <section class="section page-hero">
+        <div class="page-hero__text">
+            <h1><span class="color-text color-text--green">Блог</span></h1>
+            <p>Статьи о цифровом маркетинге, SEO, контенте и трендах. Пишем честно и по делу.</p>
+        </div>
+        <div class="blog-filters">
+            <button class="filter-btn filter-btn--active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="seo">SEO</button>
+            <button class="filter-btn" data-filter="content">Контент</button>
+            <button class="filter-btn" data-filter="ads">Реклама</button>
+            <button class="filter-btn" data-filter="smm">SMM</button>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="blog-grid">
+            <article class="blog-card" data-category="seo">
+                <div class="blog-card__img" style="background:#B9FF66">
+                    <span class="blog-card__category">SEO</span>
+                </div>
+                <div class="blog-card__body">
+                    <span class="blog-card__date">10 июня 2026</span>
+                    <h3>Как попасть в топ-3 Google за 3 месяца: реальный кейс</h3>
+                    <p>Разбираем стратегию продвижения интернет-магазина в конкурентной нише с нуля до первых позиций.</p>
+                    <a class="blog-card__link">Читать статью →</a>
+                </div>
+            </article>
+            <article class="blog-card" data-category="content">
+                <div class="blog-card__img" style="background:#191A23">
+                    <span class="blog-card__category" style="color:#B9FF66">Контент</span>
+                </div>
+                <div class="blog-card__body">
+                    <span class="blog-card__date">5 июня 2026</span>
+                    <h3>5 форматов контента, которые работают в 2026 году</h3>
+                    <p>Короткое видео, подкасты, интерактивы — что даёт охваты и что реально конвертирует.</p>
+                    <a class="blog-card__link">Читать статью →</a>
+                </div>
+            </article>
+            <article class="blog-card" data-category="ads">
+                <div class="blog-card__img" style="background:#b9ff6680">
+                    <span class="blog-card__category">Реклама</span>
+                </div>
+                <div class="blog-card__body">
+                    <span class="blog-card__date">28 мая 2026</span>
+                    <h3>Яндекс Директ в 2026: что изменилось и как настраивать</h3>
+                    <p>Новые форматы, автостратегии и ошибки, которые сливают бюджет. Полное руководство.</p>
+                    <a class="blog-card__link">Читать статью →</a>
+                </div>
+            </article>
+            <article class="blog-card" data-category="smm">
+                <div class="blog-card__img" style="background:#191A23">
+                    <span class="blog-card__category" style="color:#B9FF66">SMM</span>
+                </div>
+                <div class="blog-card__body">
+                    <span class="blog-card__date">20 мая 2026</span>
+                    <h3>ВКонтакте vs Telegram: где строить комьюнити бренда</h3>
+                    <p>Сравниваем охваты, инструменты и стоимость подписчика на двух главных платформах.</p>
+                    <a class="blog-card__link">Читать статью →</a>
+                </div>
+            </article>
+            <article class="blog-card" data-category="seo">
+                <div class="blog-card__img" style="background:#B9FF66">
+                    <span class="blog-card__category">SEO</span>
+                </div>
+                <div class="blog-card__body">
+                    <span class="blog-card__date">12 мая 2026</span>
+                    <h3>Внутренняя перелинковка: полное руководство с примерами</h3>
+                    <p>Как структурировать сайт, чтобы поисковики понимали его иерархию и повышали позиции.</p>
+                    <a class="blog-card__link">Читать статью →</a>
+                </div>
+            </article>
+            <article class="blog-card" data-category="content">
+                <div class="blog-card__img" style="background:#b9ff6680">
+                    <span class="blog-card__category">Контент</span>
+                </div>
+                <div class="blog-card__body">
+                    <span class="blog-card__date">3 мая 2026</span>
+                    <h3>Как писать тексты для лендингов: структура и психология</h3>
+                    <p>Разбираем заголовки, офферы и CTA на реальных примерах конверсионных страниц.</p>
+                    <a class="blog-card__link">Читать статью →</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="footer-top">
+            <a href="index.html"><img src="./images/logo-white.svg" alt="logo"></a>
+            <ul class="menu-list menu-list--desktop" style="color: #fff;">
+                <li><a class="menu__item" href="about.html">О нас</a></li>
+                <li><a class="menu__item" href="#">Услуги</a></li>
+                <li><a class="menu__item" href="#">Применение</a></li>
+                <li><a class="menu__item" href="#">Стоимость</a></li>
+                <li><a class="menu__item" href="blog.html">Блог</a></li>
+            </ul>
+            <div class="contacts">
+                <a href="#"><img src="./images/f.svg" /></a>
+                <a href="#"><img src="./images/twitter.png" /></a>
+                <a href="#"><img src="./images/in.svg" /></a>
+            </div>
+        </div>
+        <ul class="menu-list menu-list--mobile" style="color: #fff;">
+            <li><a class="menu__item" href="about.html">О нас</a></li>
+            <li><a class="menu__item" href="#">Услуги</a></li>
+            <li><a class="menu__item" href="#">Применение</a></li>
+            <li><a class="menu__item" href="#">Стоимость</a></li>
+            <li><a class="menu__item" href="blog.html">Блог</a></li>
+        </ul>
+        <div class="footer-middle">
+            <div class="footer-middle__content">
+                <div class="footer-middle__content-title" style="background-color: #b9ff66">Свяжитесь с нами:</div>
+                <div class="footer-middle__content-contacts">
+                    <span>Почта: info@positivus.com</span>
+                    <span>Телефон: +7 (999) 999-66-99</span>
+                    <span style="width: 250px;">Адрес: Россия, г. Новосибирск, ул. Немировича-Данченко, 102</span>
+                </div>
+            </div>
+            <div class="footer-middle__form" id="contact-form">
+                <input type="email" id="email-input" placeholder="Введите почту">
+                <button class="btn-form" id="form-submit">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const burgerIcon = document.querySelector('.header-menu__icon');
+        const headerMenu = document.querySelector('.header__menu');
+        burgerIcon.addEventListener('click', () => headerMenu.classList.toggle('open'));
+
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('filter-btn--active'));
+                this.classList.add('filter-btn--active');
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.blog-card').forEach(card => {
+                    const match = filter === 'all' || card.dataset.category === filter;
+                    card.style.display = match ? 'flex' : 'none';
+                });
+            });
+        });
+
+        document.getElementById('form-submit').addEventListener('click', () => {
+            const emailInput = document.getElementById('email-input');
+            const email = emailInput.value.trim();
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                emailInput.style.borderColor = '#f87171';
+                emailInput.focus();
+                return;
+            }
+            emailInput.style.borderColor = '';
+            showToast('Заявка отправлена! Мы свяжемся с вами скоро.');
+            emailInput.value = '';
+        });
+
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = msg;
+            document.body.appendChild(toast);
+            requestAnimationFrame(() => toast.classList.add('toast--visible'));
+            setTimeout(() => {
+                toast.classList.remove('toast--visible');
+                setTimeout(() => toast.remove(), 400);
+            }, 3000);
+        }
+
+        document.querySelectorAll('.btn, .btn-form').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                ripple.className = 'ripple';
+                const rect = this.getBoundingClientRect();
+                ripple.style.left = `${e.clientX - rect.left}px`;
+                ripple.style.top = `${e.clientY - rect.top}px`;
+                this.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.blog-card').forEach((el, i) => {
+            el.classList.add('reveal');
+            el.style.transitionDelay = `${i * 0.08}s`;
+            revealObserver.observe(el);
+        });
+    </script>
+</body>
+</html>
