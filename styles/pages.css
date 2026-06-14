@@ -204,6 +204,111 @@
   color: #5a8a00;
 }
 
+/* === Services Accordion === */
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+.service-item {
+  border: 1px solid #191A23;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 0 0 black;
+}
+.service-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 32px;
+  cursor: pointer;
+  background: #F3F3F3;
+  transition: background 0.2s;
+}
+.service-item.open .service-item__header {
+  background: #B9FF66;
+}
+.service-item__title {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.service-item__title h2 {
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 500;
+  margin: 0;
+}
+.service-num {
+  font-size: 14px;
+  font-weight: 700;
+  color: #888;
+  min-width: 28px;
+}
+.service-toggle {
+  font-family: 'Space Grotesk', sans-serif;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #191A23;
+  background: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+  line-height: 1;
+}
+.service-toggle:hover {
+  background: #191A23;
+  color: #B9FF66;
+}
+.service-item__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.service-item.open .service-item__body {
+  max-height: 500px;
+}
+.service-item__content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 32px;
+  border-top: 1px solid #e0e0e0;
+}
+.service-item__text {
+  flex: 1;
+}
+.service-item__text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 20px;
+}
+.service-features {
+  padding-left: 20px;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.service-features li {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+.service-item__img {
+  width: 200px;
+  flex-shrink: 0;
+}
+.service-cta {
+  margin-bottom: 0;
+}
+
 /* === Responsive === */
 @media screen and (max-width: 910px) {
   .about-mission {
