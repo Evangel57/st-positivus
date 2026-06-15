@@ -296,10 +296,20 @@ p {
 }
 
 /* === Logo link === */
-.header > a {
+.logo-link {
   display: flex;
   align-items: center;
+  gap: 10px;
   text-decoration: none;
+}
+.logo-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #191A23;
+  letter-spacing: -0.02em;
+}
+.footer .logo-text {
+  color: #fff;
 }
 
 /* === Footer nav hover override === */

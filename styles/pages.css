@@ -135,6 +135,10 @@
   background: #191A23;
   color: #B9FF66;
 }
+.filter-btn--active:hover {
+  background: #2d2e3d;
+  color: #B9FF66;
+}
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
