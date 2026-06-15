@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="icon" type="image/svg+xml" href="./images/Logo.svg">
     <title>Positivus</title>
 </head>
 <body class="container">
@@ -17,8 +18,7 @@
             <ol class="menu-list">
                 <li><a class="menu__item" href="about.html">О нас</a></li>
                 <li><a class="menu__item" href="services.html">Услуги</a></li>
-                <li><a class="menu__item" href="#">Применение</a></li>
-                <li><a class="menu__item" href="#">Стоимость</a></li>
+                <li><a class="menu__item" href="services.html#pricing">Стоимость</a></li>
                 <li><a class="menu__item" href="blog.html">Блог</a></li>
             </ol>
             <button class="btn btn--light">Узнать цену</button>
@@ -148,7 +148,6 @@
             </div>
         </div>
     </section>
-
     <section class="section stats">
         <div class="stats__grid">
             <div class="stat">
@@ -169,15 +168,13 @@
             </div>
         </div>
     </section>
-
     <div class="footer">
         <div class="footer-top">
             <a href="index.html"><img src="./images/logo-white.svg" alt="logo"></a>
             <ul class="menu-list menu-list--desktop" style="color: #fff;">
                 <li><a class="menu__item" href="about.html">О нас</a></li>
                 <li><a class="menu__item" href="services.html">Услуги</a></li>
-                <li><a class="menu__item" href="#">Применение</a></li>
-                <li><a class="menu__item" href="#">Стоимость</a></li>
+                <li><a class="menu__item" href="services.html#pricing">Стоимость</a></li>
                 <li><a class="menu__item" href="blog.html">Блог</a></li>
             </ul>
             <div class="contacts">
@@ -195,8 +192,7 @@
         <ul class="menu-list menu-list--mobile" style="color: #fff;">
             <li><a class="menu__item" href="about.html">О нас</a></li>
             <li><a class="menu__item" href="services.html">Услуги</a></li>
-            <li><a class="menu__item" href="#">Применение</a></li>
-            <li><a class="menu__item" href="#">Стоимость</a></li>
+            <li><a class="menu__item" href="services.html#pricing">Стоимость</a></li>
             <li><a class="menu__item" href="blog.html">Блог</a></li>
         </ul>
         <div class="footer-middle">
@@ -207,7 +203,6 @@
                     <span>Телефон: +7 (999) 999-66-99</span>
                     <span style="width: 250px;">Адрес: Россия, г. Новосибирск, ул. Немировича-Данченко, 102</span>
                 </div>
-
             </div>
             <div class="footer-middle__form" id="contact-form">
                 <input type="email" id="email-input" placeholder="Введите почту">
@@ -222,17 +217,16 @@
         burgerIcon.addEventListener('click', () => {
             headerMenu.classList.toggle('open');
         });
-
-        // Scroll to form
-        const scrollToForm = () => {
-            document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
-        };
-        document.querySelector('.btn--light').addEventListener('click', scrollToForm);
-        document.querySelector('.btn--dark').addEventListener('click', scrollToForm);
-        document.querySelectorAll('.card__text a').forEach(a => {
-            a.addEventListener('click', scrollToForm);
+        // Button actions
+        document.querySelector('.btn--light').addEventListener('click', () => {
+            window.location.href = 'services.html#pricing';
         });
-
+        document.querySelector('.btn--dark').addEventListener('click', () => {
+            document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+        });
+        document.querySelectorAll('.card__text a').forEach(a => {
+            a.addEventListener('click', () => { window.location.href = 'services.html'; });
+        });
         // Form submit
         const emailInput = document.getElementById('email-input');
         document.getElementById('form-submit').addEventListener('click', () => {
@@ -246,7 +240,6 @@
             showToast('Заявка отправлена! Мы свяжемся с вами скоро.');
             emailInput.value = '';
         });
-
         // Toast
         function showToast(msg) {
             const toast = document.createElement('div');
@@ -259,7 +252,6 @@
                 setTimeout(() => toast.remove(), 400);
             }, 3000);
         }
-
         // Ripple effect
         document.querySelectorAll('.btn, .btn-form').forEach(btn => {
             btn.addEventListener('click', function(e) {
@@ -272,14 +264,12 @@
                 setTimeout(() => ripple.remove(), 600);
             });
         });
-
         // Scroll reveal
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.15 });
-
         document.querySelectorAll('.card').forEach((el, i) => {
             el.classList.add('reveal');
             el.style.transitionDelay = `${i * 0.08}s`;
@@ -289,7 +279,6 @@
             el.classList.add('reveal');
             revealObserver.observe(el);
         });
-
         // Animated counters
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -309,7 +298,6 @@
                 counterObserver.unobserve(el);
             });
         }, { threshold: 0.5 });
-
         document.querySelectorAll('.stat__number').forEach(el => counterObserver.observe(el));
     </script>
 </body>
