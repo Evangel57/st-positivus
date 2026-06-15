@@ -194,6 +194,102 @@
         </div>
     </section>
 
+    <section class="section pricing">
+        <div class="services__text">
+            <p class="color-text color-text--green">Стоимость</p>
+            <p>Выберите пакет и оплатите прямо сейчас — начнём работу в течение 24 часов</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card pricing-card--gray">
+                <div class="pricing-card__header">
+                    <h3>Тест</h3>
+                    <div class="pricing-card__price">10 <span>₽</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li>✓ Проверка оплаты</li>
+                    <li>✓ Один раз</li>
+                    <li class="disabled">✗ Услуги не включены</li>
+                    <li class="disabled">✗ Только для теста</li>
+                </ul>
+                <form action="https://yoomoney.ru/quickpay/confirm.xml" method="post">
+                    <input type="hidden" name="receiver" value="4100119066974075">
+                    <input type="hidden" name="quickpay-form" value="shop">
+                    <input type="hidden" name="targets" value="Тестовый платёж — Positivus">
+                    <input type="hidden" name="sum" value="10">
+                    <input type="hidden" name="label" value="test">
+                    <button type="submit" class="btn btn--dark pricing-btn">Проверить оплату</button>
+                </form>
+            </div>
+            <div class="pricing-card pricing-card--gray">
+                <div class="pricing-card__header">
+                    <h3>Старт</h3>
+                    <div class="pricing-card__price">15 000 <span>₽/мес</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li>✓ SEO-аудит сайта</li>
+                    <li>✓ 10 статей в месяц</li>
+                    <li>✓ Настройка Яндекс Метрики</li>
+                    <li>✓ Ежемесячный отчёт</li>
+                    <li class="disabled">✗ Таргетированная реклама</li>
+                    <li class="disabled">✗ SMM</li>
+                </ul>
+                <form action="https://yoomoney.ru/quickpay/confirm.xml" method="post">
+                    <input type="hidden" name="receiver" value="4100119066974075">
+                    <input type="hidden" name="quickpay-form" value="shop">
+                    <input type="hidden" name="targets" value="Пакет Старт — Positivus">
+                    <input type="hidden" name="sum" value="15000">
+                    <input type="hidden" name="label" value="start">
+                    <button type="submit" class="btn btn--dark pricing-btn">Купить пакет</button>
+                </form>
+            </div>
+            <div class="pricing-card pricing-card--green">
+                <div class="pricing-card__badge">Популярный</div>
+                <div class="pricing-card__header">
+                    <h3>Бизнес</h3>
+                    <div class="pricing-card__price">35 000 <span>₽/мес</span></div>
+                </div>
+                <ul class="pricing-features">
+                    <li>✓ SEO-аудит + продвижение</li>
+                    <li>✓ 25 статей в месяц</li>
+                    <li>✓ Таргетированная реклама</li>
+                    <li>✓ Ведение соцсетей</li>
+                    <li>✓ Сквозная аналитика</li>
+                    <li>✓ Еженедельный отчёт</li>
+                </ul>
+                <form action="https://yoomoney.ru/quickpay/confirm.xml" method="post">
+                    <input type="hidden" name="receiver" value="4100119066974075">
+                    <input type="hidden" name="quickpay-form" value="shop">
+                    <input type="hidden" name="targets" value="Пакет Бизнес — Positivus">
+                    <input type="hidden" name="sum" value="35000">
+                    <input type="hidden" name="label" value="business">
+                    <button type="submit" class="btn btn--dark pricing-btn">Купить пакет</button>
+                </form>
+            </div>
+            <div class="pricing-card pricing-card--black">
+                <div class="pricing-card__header">
+                    <h3>Про</h3>
+                    <div class="pricing-card__price">70 000 <span>₽/мес</span></div>
+                </div>
+                <ul class="pricing-features pricing-features--white">
+                    <li>✓ Полное SEO-продвижение</li>
+                    <li>✓ Контент без ограничений</li>
+                    <li>✓ Реклама во всех каналах</li>
+                    <li>✓ SMM + Email-маркетинг</li>
+                    <li>✓ Персональный менеджер</li>
+                    <li>✓ Отчёт в реальном времени</li>
+                </ul>
+                <form action="https://yoomoney.ru/quickpay/confirm.xml" method="post">
+                    <input type="hidden" name="receiver" value="4100119066974075">
+                    <input type="hidden" name="quickpay-form" value="shop">
+                    <input type="hidden" name="targets" value="Пакет Про — Positivus">
+                    <input type="hidden" name="sum" value="70000">
+                    <input type="hidden" name="label" value="pro">
+                    <button type="submit" class="btn pricing-btn pricing-btn--green">Купить пакет</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <div class="footer">
         <div class="footer-top">
             <a href="index.html"><img src="./images/logo-white.svg" alt="logo"></a>
